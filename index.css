@@ -1,0 +1,130 @@
+/* Kod till hamburgar menyn => https://github.com/treehouse/ham-menu/tree/main */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+a {
+    color: rgb(0, 0, 0);
+}
+a:visited {
+    color: rgb(0, 0, 0);
+}
+a:hover {
+    color: #000000;
+}
+
+body {
+    background-color: #D1DFE8;
+    font-family: sans-serif;
+}
+
+
+
+/* off-screen-menu */
+.off-screen-menu {
+    background-color: #ACA6A3;
+    height: 100vh;
+    width: 100%;
+    max-width: 450px;
+    position: fixed;
+    top: 0;
+    right: -450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    text-align: center;
+    font-size: 2rem;
+    transition: .5s ease;
+}
+.off-screen-menu.active {
+    right: 0;
+}
+
+
+
+/* nav */
+nav {
+    padding: 1rem;
+    display: flex;
+    background-color: #C49F89;
+}
+
+
+
+/* ham menu */
+.ham-menu {
+    height: 50px;
+    width: 40px;
+    margin-left: auto;
+    position: relative;
+}
+.ham-menu span {
+    height: 5px;
+    width: 100%;
+    background-color: #D1DFE8;
+    border-radius: 25px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: .3s ease;
+}
+.ham-menu span:nth-child(1) {
+    top: 25%;
+}
+.ham-menu span:nth-child(3) {
+    top: 75%;
+}
+.ham-menu.active span {
+    background-color: #D1DFE8;
+}
+.ham-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.ham-menu.active span:nth-child(2) {
+    opacity: 0;
+}
+.ham-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* Här slutar koden */
+
+.Heading-text{
+    text-align: center;
+    margin-left: 45%;
+}
+
+.Welcome-Pic{
+    text-align: center;
+}
+
+.Welcome-text{
+    text-align: center;
+}
+
+.Welcome-form-table form{
+    margin-left: 11%;
+    margin-top: 0%;
+}
+
+.Welcome-form-table h2{
+    margin-top: 5%;
+    margin-left: 11%;
+    margin-bottom: 1%;
+}
+
+.Welcome-form-table table{
+    margin-left: 37%;
+    margin-top: 2%;
+}
+
+th, td{
+    padding-left: 80px;
+}
